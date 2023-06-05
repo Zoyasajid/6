@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: royalblue;
+    display: grid;
+    /* position: absolute; */
+    text-align: center;
+    height: 100vh;
+    place-items: center;
+    }
+.container{
+    position: relative;
+    width: 80vmin;
+    background-color: aqua;
+    border-radius: 9px;
+    padding: 100px 40px;
+    margin: 50px;
+}
+h1{
+    padding: 30px;
+    margin-top: -60px;
+}
+h2{
+    font-size: 60px;
+    /* font-style: initial; */
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+}
+.btn{
+    margin-bottom: -50px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    /* box-sizing: border-box; */
+    /* box-sizing: unset; */
+}
+.btn button{
+    width: 40px;
+    padding: 10px 0px;
+}
+</style>
+<body>
+<div class="container">
+    <h1>COUNTER</h1>
+    <h2 id="num">0</h2>
+    <div class="btn" id="btns">
+        <button class="min" onclick="subtract()"> 
+            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <!-- <p id="COUNTER"></p>  -->
+         <button class="reset" id="resetButtons" onclick="reset()"> 
+            <i class="fa-solid fa-rotate-right"></i>
+                </button>
+                    <button class="add" onclick="adding()"> 
+                            <i class="fa-solid fa-plus"></i>
+                    </button>
+    </div>
+</div> 
+
+
+</body>
+<script>
+ 
+
+    let num2 = document.getElementById("num")
+let value =0
+
+let btn1=document.querySelector(".add");
+let btn2=document.querySelector(".reset");
+let btn3=document.querySelector(".min");
+// updateDisplay();
+
+// btn1.addEventListener('click' , ()=>{
+//     value ++ ;
+// console.log(btn1)
+// });
+
+function adding(){
+    document.querySelector(".add")
+    value+=1
+    document.getElementById("num").innerHTML = value
+}
+function subtract(){
+    document.querySelector(".min")
+    value-=1
+    document.getElementById("num").innerHTML = value
+}
+
+// counter = 0;
+// // document.querySelector("btn").innerHTML = counter;
+
+// // document.querySelector("reset").click =
+// // function(){
+// //     counter = 0;
+// //   document.getElementById("rstbtn").innerHTML = counter;
+// // }
+// var value2= document.getElementById("num")
+// function reset(){
+//   value = 0;
+//   value2.innerHTML = value;
+// }
+ var value2= document.getElementById("num")
+
+ function reset(){
+     var confirmReset = confirm("Are you sure you want to reset?");
+
+       if (confirmReset) {
+           value = 0;
+  value2.innerHTML = value;
+       }
+       if (confirmReset){
+         num.innerHTML=count
+      }
+ }
+
+
+
+// btn2.addEventListener('click', function() {
+//       var confirmReset = confirm("Are you sure you want to reset?");
+
+//       if (confirmReset) {
+//         count = 0;
+//         countElement.textContent = count;
+//       }
+//     });
+</script>
+</html>
